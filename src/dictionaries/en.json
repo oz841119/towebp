@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "badge": "Secure Local Conversion",
+    "title": "Professional Image to WebP Converter",
+    "subtitle": "Secure, fast, and high-quality conversion for your needs.",
+    "cta": "Start Converting"
+  },
+  "dropzone": {
+    "dragDrop": "Drag & drop files here, or click to select files",
+    "support": "Supports PNG and JPG"
+  },
+  "controls": {
+    "quality": "Quality",
+    "width": "Width",
+    "height": "Height",
+    "maintainAspectRatio": "Maintain Aspect Ratio",
+    "download": "Download WebP"
+  },
+  "converter": {
+    "original": "Original",
+    "changeFile": "Change File",
+    "saved": "saved",
+    "previewNote": "The preview above updates automatically. WebP typically reduces file size by 30% to 80% compared to JPEG and PNG. Adjust the quality slider to find the perfect balance."
+  },
+  "seo": {
+    "title": "Why use WebP?",
+    "content": "WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.",
+    "benefitsTitle": "Benefits of using our Converter",
+    "benefit1Title": "Privacy First:",
+    "benefit1Desc": "All conversions happen locally in your browser. No images are uploaded to any server.",
+    "benefit2Title": "High Efficiency:",
+    "benefit2Desc": "Convert PNG and JPG images to high-quality WebP format in seconds.",
+    "benefit3Title": "Customizable:",
+    "benefit3Desc": "Adjust quality and dimensions to meet your specific requirements.",
+    "quote": "WebP is supported by all modern browsers and offers superior compression and quality characteristics compared to older formats.",
+    "modernTitle": "AI Vibe Coding & The Performance Gap",
+    "modernContent": "AI Vibe Coders often prioritize speed and aesthetics, inadvertently neglecting image optimization. This leads to heavy, slow-loading \"vibe\" sites. This tool bridges the gap by ensuring your visuals are as performant as your code.",
+    "modernList1": "Fix the 'bloat' often left behind by rapid AI prototyping.",
+    "modernList2": "Maintain the 'vibe' without sacrificing Core Web Vitals.",
+    "modernList3": "The perfect companion for AI-generated assets that need slimming down.",
+    "techTitle": "Technical Deep Dive: How WebP Works",
+    "techContent": "WebP's superior efficiency is driven by advanced algorithms derived from the VP8 video codec:",
+    "techList1": "<strong>Predictive Coding:</strong> Uses neighbor blocks to predict values, encoding only the difference (residual).",
+    "techList2": "<strong>Entropy Encoding:</strong> Arithmetic coding compresses data more efficiently than Huffman coding used in JPEGs.",
+    "techList3": "<strong>Alpha Channel:</strong> Supports transparency with just 22% more bytes than lossy compression, unlike PNG's heavy footprint."
+  }
+}

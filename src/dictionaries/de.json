@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "Sichere lokale Konvertierung",
+    "title": "Bild zu WebP Konverter",
+    "subtitle": "Optimieren Sie Ihre Bilder im Handumdrehen. Privatsphäre gewahrt, Konvertierung direkt im Browser ohne Upload auf einen Server.",
+    "dropText": "Bild hier ablegen"
+  },
+  "dropzone": {
+    "dragText": "Ziehen Sie ein Bild hierher oder",
+    "clickText": "klicken Sie zur Auswahl",
+    "supportText": "Unterstützt PNG, JPG"
+  },
+  "controls": {
+    "settingsTitle": "Konvertierungseinstellungen",
+    "quality": "Qualität",
+    "dimensions": "Abmessungen",
+    "width": "Breite",
+    "height": "Höhe",
+    "maintainAspectRatio": "Seitenverhältnis beibehalten",
+    "download": "WebP herunterladen"
+  },
+  "converter": {
+    "original": "Original",
+    "changeFile": "Datei ändern",
+    "saved": "gespart",
+    "previewNote": "Die Vorschau oben wird automatisch aktualisiert. WebP reduziert die Dateigröße normalerweise um 30% bis 80% im Vergleich zu JPEG und PNG."
+  },
+  "seo": {
+    "title": "Warum WebP verwenden?",
+    "content": "WebP ist ein modernes Bildformat, das eine überlegene verlustfreie und verlustbehaftete Komprimierung für Bilder im Web bietet. Mit WebP können Webmaster und Entwickler kleinere, reichhaltigere Bilder erstellen, die das Web schneller machen.",
+    "benefitsTitle": "Vorteile unseres Konverters",
+    "benefit1Title": "Datenschutz zuerst:",
+    "benefit1Desc": "Alle Konvertierungen erfolgen lokal in Ihrem Browser. Es werden keine Bilder auf einen Server hochgeladen.",
+    "benefit2Title": "Hohe Effizienz:",
+    "benefit2Desc": "Konvertieren Sie PNG- und JPG-Bilder in Sekundenschnelle in das hochwertige WebP-Format.",
+    "benefit3Title": "Anpassbar:",
+    "benefit3Desc": "Passen Sie Qualität und Abmessungen an Ihre spezifischen Anforderungen an.",
+    "quote": "WebP wird von allen modernen Browsern unterstützt und bietet im Vergleich zu älteren Formaten überlegene Komprimierungs- und Qualitätsmerkmale.",
+    "modernTitle": "AI Vibe Coding & Die Leistungslücke",
+    "modernContent": "AI Vibe Coder priorisieren oft Geschwindigkeit und Ästhetik und vernachlässigen dabei versehentlich die Bildoptimierung. Dies führt zu schweren, langsam ladenden 'Vibe'-Seiten. Dieses Tool schließt die Lücke, indem es sicherstellt, dass Ihre visuellen Elemente genauso leistungsfähig sind wie Ihr Code.",
+    "modernList1": "Beheben Sie den 'Ballast', der oft durch schnelles AI-Prototyping hinterlassen wird.",
+    "modernList2": "Behalten Sie den 'Vibe' bei, ohne die Core Web Vitals zu opfern.",
+    "modernList3": "Der perfekte Begleiter für KI-generierte Assets, die verschlankt werden müssen.",
+    "techTitle": "Technischer Tiefgang: Wie WebP funktioniert",
+    "techContent": "Die überlegene Effizienz von WebP wird durch fortschrittliche Algorithmen angetrieben, die vom VP8-Videocodec abgeleitet sind:",
+    "techList1": "<strong>Prädiktive Codierung (Predictive Coding):</strong> Verwendet Nachbarblöcke zur Vorhersage von Werten und codiert nur die Differenz (Residium).",
+    "techList2": "<strong>Entropiecodierung (Entropy Encoding):</strong> Die arithmetische Codierung komprimiert Daten effizienter als die in JPEGs verwendete Huffman-Codierung.",
+    "techList3": "<strong>Alphakanal:</strong> Unterstützt Transparenz mit nur 22% mehr Bytes als bei verlustbehafteter Komprimierung, im Gegensatz zum schweren Fußabdruck von PNG."
+  }
+}

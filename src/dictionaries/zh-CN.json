@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "安全本地转换",
+    "title": "图片转 WebP",
+    "subtitle": "瞬间优化您的图片。隐私保护，直接在浏览器中转换，无需上传至服务器。",
+    "dropText": "将图片拖放到此处"
+  },
+  "dropzone": {
+    "dragText": "把图片拖放到这里，或者",
+    "clickText": "点击选择",
+    "supportText": "支持 PNG, JPG"
+  },
+  "controls": {
+    "settingsTitle": "转换设置",
+    "quality": "质量",
+    "dimensions": "尺寸",
+    "width": "宽度",
+    "height": "高度",
+    "maintainAspectRatio": "保持长宽比",
+    "download": "下载 WebP"
+  },
+  "converter": {
+    "original": "原始",
+    "changeFile": "更换文件",
+    "saved": "节省",
+    "previewNote": "上面的预览会自动更新。WebP 通常比 JPEG 和 PNG 减少 30% 到 80% 的文件大小。"
+  },
+  "seo": {
+    "title": "为什么使用 WebP 转换？",
+    "content": "WebP 是一种现代图片格式，为网络上的图片提供卓越的无损和有损压缩。使用 WebP，网站管理员和开发人员可以创建更小、更丰富的图片，使网络速度更快。",
+    "benefitsTitle": "我们转换器的优势",
+    "benefit1Title": "隐私至上：",
+    "benefit1Desc": "所有转换都在您的浏览器本地进行。没有图片上传到任何服务器。",
+    "benefit2Title": "高效：",
+    "benefit2Desc": "几秒钟内将 PNG 和 JPG 图片转换为高质量的 WebP 格式。",
+    "benefit3Title": "可定制：",
+    "benefit3Desc": "调整质量和尺寸以满足您的特定需求。",
+    "quote": "WebP 受到所有现代浏览器的支持，并且与旧格式相比，提供更卓越的压缩和质量特性。",
+    "modernTitle": "AI Vibe Coding 与性能差距",
+    "modernContent": "AI Vibe Coder 往往专注于速度和美学，无意中忽视了图片优化。这导致了沉重、加载缓慢的“氛围”网站。这个工具通过确保您的视觉效果与代码一样高效来弥补这一差距。",
+    "modernList1": "修复 AI 快速原型制作留下的“臃肿”。",
+    "modernList2": "在不牺牲核心网络指标 (Core Web Vitals) 的情况下保持“Vibe”。",
+    "modernList3": "需要瘦身的 AI 生成资产的完美伴侣。",
+    "techTitle": "技术深入：WebP 如何工作",
+    "techContent": "WebP 的卓越效率由源自 VP8 视频编解码器的高级算法驱动：",
+    "techList1": "<strong>预测编码 (Predictive Coding)：</strong> 使用相邻块预测值，仅对差异 (Residual) 进行编码。",
+    "techList2": "<strong>熵编码 (Entropy Encoding)：</strong> 算术编码比 JPEG 使用的霍夫曼编码更有效地压缩数据。",
+    "techList3": "<strong>Alpha 通道：</strong> 支持透明度，仅比有损压缩多 22% 的字节，这与 PNG 的沉重足迹不同。"
+  }
+}

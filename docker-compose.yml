@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  towebp:
+    container_name: towebp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production

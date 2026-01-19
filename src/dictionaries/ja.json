@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badge": "安全なローカル変換",
+    "title": "画像をWebPに変換",
+    "subtitle": "瞬時に画像を最適化。プライバシーを保護し、サーバーにアップロードせずにブラウザで直接変換します。",
+    "dropText": "ここに画像をドロップ"
+  },
+  "dropzone": {
+    "dragText": "ここに画像をドラッグ＆ドロップ、または",
+    "clickText": "クリックして選択",
+    "supportText": "PNG, JPG対応"
+  },
+  "controls": {
+    "settingsTitle": "変換設定",
+    "quality": "品質",
+    "dimensions": "サイズ",
+    "width": "幅",
+    "height": "高さ",
+    "maintainAspectRatio": "アスペクト比を維持",
+    "download": "WebPをダウンロード"
+  },
+  "converter": {
+    "original": "オリジナル",
+    "changeFile": "ファイルを変更",
+    "saved": "削減",
+    "previewNote": "プレビューは自動的に更新されます。WebPはJPEGやPNGに比べて通常30%〜80%ファイルサイズを削減します。"
+  },
+  "seo": {
+    "title": "なぜWebP変換を使用するのか？",
+    "content": "WebPは、ウェブ上の画像に優れたロスレスおよびロッシー圧縮を提供する最新の画像形式です。WebPを使用することで、ウェブマスターや開発者は、より小さく、より豊かな画像を作成し、ウェブをより高速化できます。",
+    "benefitsTitle": "当コンバーターの利点",
+    "benefit1Title": "プライバシー優先：",
+    "benefit1Desc": "すべての変換はブラウザ内でローカルに行われます。画像がサーバーにアップロードされることはありません。",
+    "benefit2Title": "高効率：",
+    "benefit2Desc": "PNGやJPG画像を数秒で高品質なWebP形式に変換します。",
+    "benefit3Title": "カスタマイズ可能：",
+    "benefit3Desc": "品質やサイズを特定の要件に合わせて調整できます。",
+    "quote": "WebPはすべての最新ブラウザでサポートされており、古い形式と比較して優れた圧縮と品質特性を提供します。",
+    "modernTitle": "AI Vibe Codingとパフォーマンスのギャップ",
+    "modernContent": "AI Vibe Coderはしばしばスピードと美学を優先し、画像の最適化を誤って無視することがあります。これにより、重く、読み込みの遅い「雰囲気重視」のサイトが生まれます。このツールは、ビジュアルがコードと同じくらいパフォーマンスを発揮するようにすることで、そのギャップを埋めます。",
+    "modernList1": "AIによる急速なプロトタイピングで残されがちな「肥大化」を修正。",
+    "modernList2": "Core Web Vitalsを犠牲にすることなく「Vibe（雰囲気）」を維持。",
+    "modernList3": "スリム化が必要なAI生成アセットに最適なコンパニオン。",
+    "techTitle": "技術解説：WebPの仕組み",
+    "techContent": "WebPの優れた効率性は、VP8ビデオコーデックから派生した高度なアルゴリズムによって実現されています：",
+    "techList1": "<strong>予測符号化 (Predictive Coding)：</strong> 隣接ブロックを使用して値を予測し、差分（残差）のみを符号化します。",
+    "techList2": "<strong>エントロピー符号化 (Entropy Encoding)：</strong> JPEGで使用されるハフマン符号化よりも効率的にデータを圧縮する算術符号化を使用します。",
+    "techList3": "<strong>アルファチャンネル：</strong> 透過性をサポートし、PNGの重いフットプリントとは異なり、ロッシー圧縮よりもわずか22%多いバイト数で済みます。"
+  }
+}

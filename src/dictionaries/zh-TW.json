@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "badge": "安全本地轉換",
+    "title": "專業圖片轉 WebP 工具",
+    "subtitle": "安全、快速且高品質的轉換服務，滿足您的所有需求。",
+    "cta": "開始轉換"
+  },
+  "dropzone": {
+    "dragDrop": "拖放檔案至此，或點擊選擇檔案",
+    "support": "支援 PNG 與 JPG 格式"
+  },
+  "controls": {
+    "quality": "品質",
+    "width": "寬度",
+    "height": "高度",
+    "maintainAspectRatio": "保持長寬比",
+    "download": "下載 WebP"
+  },
+  "converter": {
+    "original": "原始圖片",
+    "changeFile": "更換檔案",
+    "saved": "已節省",
+    "previewNote": "上方預覽會自動更新。與 JPEG 和 PNG 相比，WebP 通常可減少 30% 到 80% 的檔案大小。調整品質滑桿以找到最佳平衡點。"
+  },
+  "seo": {
+    "title": "為什麼使用 WebP？",
+    "content": "WebP 是一種現代圖片格式，可為網路圖片提供卓越的無失真和失真壓縮。使用 WebP，網站管理員和開發人員可以建立更小、更豐富的圖片，從而加快網頁載入速度。",
+    "benefitsTitle": "使用我們轉換器的優點",
+    "benefit1Title": "隱私優先：",
+    "benefit1Desc": "所有轉換均在您的瀏覽器本地進行。沒有圖片會上傳到任何伺服器。",
+    "benefit2Title": "高效能：",
+    "benefit2Desc": "在幾秒鐘內將 PNG 和 JPG 圖片轉換為高品質的 WebP 格式。",
+    "benefit3Title": "可自訂：",
+    "benefit3Desc": "調整品質和尺寸以滿足您的具體需求。",
+    "quote": "WebP 受到所有現代瀏覽器的支援，並且與舊格式相比，提供更卓越的壓縮和品質特性。",
+    "modernTitle": "AI Vibe Coding 與效能缺口",
+    "modernContent": "AI Vibe Coder 往往專注於開發速度與美感，卻常忽略了圖片最佳化，導致產出「氛圍感」十足但載入緩慢的網站。此工具正好彌補了這個缺口，確保您的視覺效果與程式碼一樣高效。",
+    "modernList1": "修復 AI 快速原型製作中常留下的「數位肥胖」。",
+    "modernList2": "在不犧牲核心網頁指標 (Core Web Vitals) 的前提下保持「Vibe」。",
+    "modernList3": "AI 生成圖片的最佳瘦身伴侶。",
+    "techTitle": "技術解析：WebP 的壓縮原理",
+    "techContent": "WebP 的卓越效能源於 VP8 視訊編碼的先進演算法：",
+    "techList1": "<strong>預測編碼 (Predictive Coding)：</strong> 利用相鄰區塊預測像素值，僅對差異 (Residual) 進行編碼，大幅減少數據量。",
+    "techList2": "<strong>熵編碼 (Entropy Encoding)：</strong> 使用算術編碼 (Arithmetic Coding)，比 JPEG 使用的霍夫曼編碼 (Huffman Coding) 更有效地壓縮數據。",
+    "techList3": "<strong>Alpha 通道：</strong> 支援透明度，且比有損壓縮僅多佔用 22% 的位元組，遠優於 PNG 的龐大體積。"
+  }
+}
