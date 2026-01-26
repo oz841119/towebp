@@ -1,0 +1,3 @@
+# 設定 shell 腳本為可執行檔案
+*.sh text eol=lf
+scripts/*.sh text eol=lf

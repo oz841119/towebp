@@ -46,5 +46,12 @@
     "techList1": "<strong>Codage Prédictif :</strong> Utilise les blocs voisins pour prédire les valeurs, en encodant uniquement la différence (résidu).",
     "techList2": "<strong>Codage Entropique :</strong> Le codage arithmétique compresse les données plus efficacement que le codage Huffman utilisé dans les JPEG.",
     "techList3": "<strong>Canal Alpha :</strong> Prend en charge la transparence avec seulement 22% d'octets de plus que la compression avec perte, contrairement à l'empreinte lourde du PNG."
+  },
+  "meta": {
+    "title": "Convertisseur Gratuit d'Image vers WebP en Ligne - Conversion Sécurisée Locale PNG/JPG vers WebP",
+    "description": "Convertisseur professionnel gratuit d'image vers WebP. Convertissez PNG, JPG en WebP avec traitement 100% dans le navigateur pour la confidentialité. Personnalisez la qualité et la taille, réduisez la taille du fichier de 30 à 80%, améliorez la vitesse de chargement du site web.",
+    "keywords": "Convertisseur WebP, image vers WebP, PNG vers WebP, JPG vers WebP, compression d'image en ligne, optimisation d'image, outil de conversion gratuit",
+    "ogTitle": "Convertisseur Gratuit d'Image vers WebP - Conversion Locale Sécurisée",
+    "ogDescription": "Convertisseur WebP professionnel prenant en charge les formats PNG/JPG. Traitement 100% local, confidentialité protégée, réduction de la taille du fichier de 30 à 80%."
   }
 }

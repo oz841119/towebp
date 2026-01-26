@@ -46,5 +46,12 @@
     "techList1": "<strong>预测编码 (Predictive Coding)：</strong> 使用相邻块预测值，仅对差异 (Residual) 进行编码。",
     "techList2": "<strong>熵编码 (Entropy Encoding)：</strong> 算术编码比 JPEG 使用的霍夫曼编码更有效地压缩数据。",
     "techList3": "<strong>Alpha 通道：</strong> 支持透明度，仅比有损压缩多 22% 的字节，这与 PNG 的沉重足迹不同。"
+  },
+  "meta": {
+    "title": "免费在线图片转 WebP 工具 - 安全本地转换 PNG/JPG 至 WebP",
+    "description": "免费专业的图片转 WebP 工具。支持 PNG、JPG 转 WebP，100% 浏览器本地处理，保护隐私。可自定义质量、尺寸，减少 30-80% 文件大小，提升网站加载速度。",
+    "keywords": "WebP 转换器, 图片转 WebP, PNG 转 WebP, JPG 转 WebP, 在线图片压缩, 图片优化, 免费转换工具",
+    "ogTitle": "免费图片转 WebP 工具 - 本地安全转换",
+    "ogDescription": "专业 WebP 转换工具，支持 PNG/JPG 格式。100% 本地处理，保护隐私，减少 30-80% 文件大小。"
   }
 }

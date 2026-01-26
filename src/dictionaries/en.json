@@ -43,5 +43,12 @@
     "techList1": "<strong>Predictive Coding:</strong> Uses neighbor blocks to predict values, encoding only the difference (residual).",
     "techList2": "<strong>Entropy Encoding:</strong> Arithmetic coding compresses data more efficiently than Huffman coding used in JPEGs.",
     "techList3": "<strong>Alpha Channel:</strong> Supports transparency with just 22% more bytes than lossy compression, unlike PNG's heavy footprint."
+  },
+  "meta": {
+    "title": "Free Online Image to WebP Converter - Secure Local PNG/JPG to WebP Conversion",
+    "description": "Professional free image to WebP converter. Convert PNG, JPG to WebP with 100% browser-based processing for privacy. Customize quality and size, reduce file size by 30-80%, improve website loading speed.",
+    "keywords": "WebP converter, image to WebP, PNG to WebP, JPG to WebP, online image compression, image optimization, free converter tool",
+    "ogTitle": "Free Image to WebP Converter - Secure Local Conversion",
+    "ogDescription": "Professional WebP converter supporting PNG/JPG formats. 100% local processing, privacy protected, reduce file size by 30-80%."
   }
 }

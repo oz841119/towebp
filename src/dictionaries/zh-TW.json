@@ -43,5 +43,12 @@
     "techList1": "<strong>預測編碼 (Predictive Coding)：</strong> 利用相鄰區塊預測像素值，僅對差異 (Residual) 進行編碼，大幅減少數據量。",
     "techList2": "<strong>熵編碼 (Entropy Encoding)：</strong> 使用算術編碼 (Arithmetic Coding)，比 JPEG 使用的霍夫曼編碼 (Huffman Coding) 更有效地壓縮數據。",
     "techList3": "<strong>Alpha 通道：</strong> 支援透明度，且比有損壓縮僅多佔用 22% 的位元組，遠優於 PNG 的龐大體積。"
+  },
+  "meta": {
+    "title": "免費線上圖片轉 WebP 工具 - 安全本地轉換 PNG/JPG 至 WebP",
+    "description": "免費專業的圖片轉 WebP 工具。支援 PNG、JPG 轉 WebP，100% 瀏覽器本地處理，保護隱私。可自訂品質、尺寸，減少 30-80% 檔案大小，提升網站載入速度。",
+    "keywords": "WebP 轉換器, 圖片轉 WebP, PNG 轉 WebP, JPG 轉 WebP, 線上圖片壓縮, 圖片最佳化, 免費轉換工具",
+    "ogTitle": "免費圖片轉 WebP 工具 - 本地安全轉換",
+    "ogDescription": "專業 WebP 轉換工具，支援 PNG/JPG 格式。100% 本地處理，保護隱私，減少 30-80% 檔案大小。"
   }
 }

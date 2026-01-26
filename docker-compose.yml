@@ -6,8 +6,22 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    # 如果使用 Docker Hub 映像，取消下面這行的註解並註解上面的 build
+    # image: your-dockerhub-username/towebp:latest
     restart: always
     ports:
       - "3001:3000"
     environment:
       - NODE_ENV=production
+      - NEXT_PUBLIC_BASE_URL=${NEXT_PUBLIC_BASE_URL:-https://towebp.com}
+      - NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=${NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION:-}
+    # 如果需要持久化數據，可以添加 volumes
+    # volumes:
+    #   - ./data:/app/data
+    # 健康檢查
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
