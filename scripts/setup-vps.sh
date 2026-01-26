@@ -68,15 +68,21 @@ else
 fi
 
 # 4. 安裝 Docker Compose
-if ! command -v docker-compose &> /dev/null; then
-    echo -e "${YELLOW}🐳 安裝 Docker Compose...${NC}"
+if command -v docker-compose &> /dev/null; then
+    echo -e "${GREEN}✅ Docker Compose V1 已安裝${NC}"
+    DOCKER_COMPOSE="docker-compose"
+elif docker compose version &> /dev/null; then
+    echo -e "${GREEN}✅ Docker Compose V2 已安裝${NC}"
+    DOCKER_COMPOSE="docker compose"
+else
+    echo -e "${YELLOW}🐳 安裝 Docker Compose V2...${NC}"
+    # Docker Compose V2 通常隨 Docker 一起安裝
+    # 如果沒有，安裝 V1
     DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*?(?=")')
     curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
-    
+    DOCKER_COMPOSE="docker-compose"
     echo -e "${GREEN}✅ Docker Compose 安裝完成${NC}"
-else
-    echo -e "${GREEN}✅ Docker Compose 已安裝${NC}"
 fi
 
 # 5. 配置防火牆
@@ -133,8 +139,8 @@ git config --global --add safe.directory "$PROJECT_DIR"
 
 # 10. 建置並啟動容器
 echo -e "${YELLOW}🐳 建置並啟動 Docker 容器...${NC}"
-docker-compose build
-docker-compose up -d
+$DOCKER_COMPOSE build
+$DOCKER_COMPOSE up -d
 
 # 11. 等待容器啟動
 echo -e "${YELLOW}⏳ 等待容器啟動...${NC}"
@@ -142,7 +148,7 @@ sleep 15
 
 # 12. 檢查容器狀態
 echo -e "${YELLOW}📊 檢查容器狀態...${NC}"
-docker-compose ps
+$DOCKER_COMPOSE ps
 
 # 13. 設定自動更新腳本權限
 chmod +x scripts/*.sh
@@ -151,7 +157,11 @@ chmod +x scripts/*.sh
 read -p "是否設定自動重啟 cron job？(y/N) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "0 4 * * 0 cd $PROJECT_DIR && docker-compose restart" | crontab -
+    if [ "$DOCKER_COMPOSE" = "docker-compose" ]; then
+        echo "0 4 * * 0 cd $PROJECT_DIR && docker-compose restart" | crontab -
+    else
+        echo "0 4 * * 0 cd $PROJECT_DIR && docker compose restart" | crontab -
+    fi
     echo -e "${GREEN}✅ 已設定每週日凌晨 4 點自動重啟容器${NC}"
 fi
 
@@ -166,9 +176,15 @@ echo -e "  當前分支: $BRANCH"
 echo -e "  服務端口: 3001"
 echo ""
 echo -e "${BLUE}常用命令：${NC}"
-echo -e "  查看日誌: cd $PROJECT_DIR && docker-compose logs -f"
-echo -e "  重啟服務: cd $PROJECT_DIR && docker-compose restart"
-echo -e "  停止服務: cd $PROJECT_DIR && docker-compose down"
+if [ "$DOCKER_COMPOSE" = "docker-compose" ]; then
+    echo -e "  查看日誌: cd $PROJECT_DIR && docker-compose logs -f"
+    echo -e "  重啟服務: cd $PROJECT_DIR && docker-compose restart"
+    echo -e "  停止服務: cd $PROJECT_DIR && docker-compose down"
+else
+    echo -e "  查看日誌: cd $PROJECT_DIR && docker compose logs -f"
+    echo -e "  重啟服務: cd $PROJECT_DIR && docker compose restart"
+    echo -e "  停止服務: cd $PROJECT_DIR && docker compose down"
+fi
 echo -e "  更新部署: cd $PROJECT_DIR && bash scripts/deploy-vps.sh"
 echo ""
 echo -e "${BLUE}下一步：${NC}"

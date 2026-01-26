@@ -26,6 +26,19 @@ jobs:
             # 進入專案目錄
             cd ${{ secrets.VPS_PROJECT_PATH || '/opt/towebp' }}
             
+            # 檢測 Docker Compose 版本並設定命令
+            if command -v docker-compose &> /dev/null; then
+              DOCKER_COMPOSE="docker-compose"
+              echo "✅ 使用 Docker Compose V1"
+            elif docker compose version &> /dev/null; then
+              DOCKER_COMPOSE="docker compose"
+              echo "✅ 使用 Docker Compose V2"
+            else
+              echo "❌ 錯誤：未找到 Docker Compose"
+              echo "請在 VPS 上安裝 Docker Compose"
+              exit 1
+            fi
+            
             # 拉取最新代碼
             echo "📥 拉取最新代碼..."
             git pull origin main
@@ -39,9 +52,9 @@ jobs:
             
             # 使用 Docker Compose 重新建置和啟動
             echo "🐳 重新建置 Docker 容器..."
-            docker-compose down
-            docker-compose build --no-cache
-            docker-compose up -d
+            $DOCKER_COMPOSE down
+            $DOCKER_COMPOSE build --no-cache
+            $DOCKER_COMPOSE up -d
             
             # 清理未使用的 Docker 映像
             echo "🧹 清理未使用的 Docker 映像..."
@@ -49,11 +62,11 @@ jobs:
             
             # 顯示容器狀態
             echo "✅ 部署完成！容器狀態："
-            docker-compose ps
+            $DOCKER_COMPOSE ps
             
             # 顯示最近的日誌
             echo "📋 最近的日誌："
-            docker-compose logs --tail=50
+            $DOCKER_COMPOSE logs --tail=50
 
       - name: 通知部署結果
         if: always()

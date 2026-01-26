@@ -30,8 +30,14 @@ if ! command -v docker &> /dev/null; then
     exit 1
 fi
 
-# 檢查 Docker Compose 是否安裝
-if ! command -v docker-compose &> /dev/null; then
+# 檢測 Docker Compose 版本並設定命令
+if command -v docker-compose &> /dev/null; then
+    DOCKER_COMPOSE="docker-compose"
+    echo -e "${GREEN}✅ 使用 Docker Compose V1${NC}"
+elif docker compose version &> /dev/null; then
+    DOCKER_COMPOSE="docker compose"
+    echo -e "${GREEN}✅ 使用 Docker Compose V2${NC}"
+else
     echo -e "${RED}❌ Docker Compose 未安裝${NC}"
     exit 1
 fi
@@ -43,7 +49,7 @@ cd "$PROJECT_DIR" || exit 1
 mkdir -p "$BACKUP_DIR"
 
 # 備份當前版本（如果容器正在運行）
-if docker ps | grep -q towebp; then
+if docker ps 2>/dev/null | grep -q towebp; then
     BACKUP_NAME="backup-$(date +%Y%m%d-%H%M%S)"
     echo -e "${YELLOW}📦 備份當前版本為 ${BACKUP_NAME}...${NC}"
     
@@ -89,15 +95,15 @@ fi
 
 # 停止現有容器
 echo -e "${YELLOW}🛑 停止現有容器...${NC}"
-docker-compose down
+$DOCKER_COMPOSE down
 
 # 建置新映像
 echo -e "${YELLOW}🔨 建置 Docker 映像...${NC}"
-docker-compose build --no-cache
+$DOCKER_COMPOSE build --no-cache
 
 # 啟動容器
 echo -e "${YELLOW}🚀 啟動容器...${NC}"
-docker-compose up -d
+$DOCKER_COMPOSE up -d
 
 # 等待容器啟動
 echo -e "${YELLOW}⏳ 等待容器啟動...${NC}"
@@ -109,7 +115,7 @@ MAX_RETRIES=30
 RETRY_COUNT=0
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-    if docker ps | grep -q towebp && docker inspect --format='{{.State.Health.Status}}' towebp 2>/dev/null | grep -q "healthy"; then
+    if docker ps 2>/dev/null | grep -q towebp && docker inspect --format='{{.State.Health.Status}}' towebp 2>/dev/null | grep -q "healthy"; then
         echo -e "${GREEN}✅ 容器健康檢查通過！${NC}"
         break
     fi
@@ -118,7 +124,7 @@ while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
     if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
         echo -e "${RED}❌ 健康檢查失敗！${NC}"
         echo -e "${YELLOW}📋 顯示容器日誌：${NC}"
-        docker-compose logs --tail=50
+        $DOCKER_COMPOSE logs --tail=50
         exit 1
     fi
     
@@ -133,11 +139,11 @@ docker image prune -f
 # 顯示容器狀態
 echo -e "${GREEN}✅ 部署完成！${NC}"
 echo -e "${YELLOW}📊 容器狀態：${NC}"
-docker-compose ps
+$DOCKER_COMPOSE ps
 
 # 顯示最近的日誌
 echo -e "${YELLOW}📋 最近的日誌：${NC}"
-docker-compose logs --tail=30
+$DOCKER_COMPOSE logs --tail=30
 
 # 顯示版本資訊
 echo -e "${GREEN}🎉 部署成功！${NC}"
